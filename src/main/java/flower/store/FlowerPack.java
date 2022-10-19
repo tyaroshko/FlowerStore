@@ -10,7 +10,7 @@ public class FlowerPack {
     }
 
     public double getPrice() {
-         return price;
+        return price;
     }
 
 }

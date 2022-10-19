@@ -1,11 +1,10 @@
 package flower.store;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
-
-import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
@@ -16,7 +15,6 @@ public class FlowerTest {
     public void init() {
         flower = new Flower();
     }
-
     @Test
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
