@@ -1,10 +1,11 @@
 package flower.store;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlowerBucket {
+    private final List<FlowerPack> flowerPacks = new ArrayList<>();
     private int price;
-    private List<FlowerPack> flowerPacks;
 
     public void add(FlowerPack flowerPack) {
         this.price += flowerPack.getPrice();
@@ -15,12 +16,7 @@ public class FlowerBucket {
         return price;
     }
 
-    // Method of Department class
-//    public List<FlowerPack> getFlowerPacks()
-//    {
-////        // Returning list of user defined type
-////        // Student type
-////        return getFlowerPacks();
-//    }
-//}
+    public List<FlowerPack> getFlowerPacks() {
+        return flowerPacks;
+    }
 }

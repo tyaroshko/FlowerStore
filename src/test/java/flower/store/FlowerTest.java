@@ -15,6 +15,7 @@ public class FlowerTest {
     public void init() {
         flower = new Flower();
     }
+
     @Test
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
@@ -27,5 +28,12 @@ public class FlowerTest {
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
+    }
+
+    @Test
+    void testSepalLength() {
+        double sepalLength = 10;
+        flower.setSepalLength(sepalLength);
+        Assertions.assertEquals(sepalLength, flower.getSepalLength());
     }
 }
