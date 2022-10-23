@@ -17,10 +17,11 @@ public class Store {
     public ArrayList<FlowerBucket> search(double minPrice, double maxPrice) {
         ArrayList<FlowerBucket> result = new ArrayList<>();
         for (FlowerBucket flowerBucket : flowerBuckets) {
-            if (flowerBucket.getPrice()
-                    >= minPrice && flowerBucket.getPrice() <= maxPrice) {
-                result.add(flowerBucket);
-                break;
+            if (flowerBucket.getPrice() >= minPrice) {
+                if (flowerBucket.getPrice() <= maxPrice) {
+                    result.add(flowerBucket);
+                    break;
+                }
             }
         }
         return result;
