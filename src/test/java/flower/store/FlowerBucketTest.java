@@ -10,7 +10,7 @@ public class FlowerBucketTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_QUANTITY = 1000;
     private static final int MAX_PRICE = 100;
-
+    public static final int FLOWER_PRICE = 10;
     private FlowerBucket flowerBucket;
 
     @BeforeEach
@@ -32,8 +32,8 @@ public class FlowerBucketTest {
     @Test
     void testGetFlowerPacks() {
         Flower flower = new Rose();
-        flower.setPrice(10);
-        FlowerPack flowerPack = new FlowerPack(flower, 10);
+        flower.setPrice(FLOWER_PRICE);
+        FlowerPack flowerPack = new FlowerPack(flower, FLOWER_PRICE);
         flowerBucket.add(flowerPack);
         Assertions.assertEquals(1, flowerBucket.getFlowerPacks().size());
     }
