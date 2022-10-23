@@ -9,6 +9,7 @@ import java.util.Random;
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
+    private static final int SEPAL_LENGTH = 10;
     private Flower flower;
 
     @BeforeEach
@@ -32,7 +33,7 @@ public class FlowerTest {
 
     @Test
     void testSepalLength() {
-        double sepalLength = 10;
+        double sepalLength = SEPAL_LENGTH;
         flower.setSepalLength(sepalLength);
         Assertions.assertEquals(sepalLength, flower.getSepalLength());
     }
