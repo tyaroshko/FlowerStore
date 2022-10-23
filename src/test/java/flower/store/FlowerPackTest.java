@@ -36,8 +36,8 @@ public class FlowerPackTest {
 
     @Test
     public void testSearch() {
-        ArrayList<FlowerBucket> result = store.search
-                (SMALLER_PRICE, BIGGER_PRICE);
+        ArrayList<FlowerBucket> result =
+                store.search(SMALLER_PRICE, BIGGER_PRICE);
 
         Assertions.assertEquals(PRICE, result.size());
     }
