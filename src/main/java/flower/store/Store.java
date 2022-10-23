@@ -20,7 +20,6 @@ public class Store {
             if (flowerBucket.getPrice() >= minPrice) {
                 if (flowerBucket.getPrice() <= maxPrice) {
                     result.add(flowerBucket);
-                    break;
                 }
             }
         }
